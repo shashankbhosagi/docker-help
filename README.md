@@ -108,7 +108,8 @@ docker ps
 ```
 You should see the MySQL container (`mysqlcontainer`) in the list with the status "Up."
 
-![image](https://github.com/shashankbhosagi/docker-help/assets/78866224/91633b39-c77b-4f3d-b03b-60f516ba74ea)
+![image](https://github.com/shashankbhosagi/docker-help/assets/78866224/1e54fb66-4643-4d56-87c1-719106f857ab)
+
 
 ## 5. Access MySQL Shell (Optional)
 If you want to access the MySQL shell within the container, use the following command:
