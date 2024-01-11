@@ -1,7 +1,8 @@
 # docker-help
-This repo contains what I need for running docker in windows 
+This repo contains what I need for running docker on my computer.
+Note : I have windows so below configuration files may contain OS specific stuff, you need to tweak the configuration if you want to use it on Ubuntu/MacOS
 
-# mysql
+# mysql (docker-compose.yml)
 ```python
 services:
   mysqldb:
@@ -73,4 +74,70 @@ networks:
 
 
 This Docker Compose configuration sets up a MySQL service using the official MySQL Docker image (version 8.0). The service is configured with persistent storage, port mapping, environment variables, and network settings.
+
+# Running MySQL Docker Compose Configuration
+
+Follow these steps to run the MySQL Docker Compose configuration:
+
+## 1. Create a Docker Compose File
+
+Save the Docker Compose configuration in a file named `docker-compose.yml`. Use a text editor to create this file and copy the content into it.
+
+## 2. Navigate to the Directory
+
+Open a terminal or command prompt, and navigate to the directory where your `docker-compose.yml` file is located.
+
+```bash
+cd /path/to/your/docker-compose-directory
+```
+
+## 3. Run Docker Compose
+Execute the following command to start the MySQL service:
+
+```bash
+docker-compose up -d
+```
+
+This command will download the MySQL image (if not already downloaded) and create a container based on your configuration.
+
+
+## 4. Check Container Status
+Check the status of the running MySQL container using the following command:
+```bash
+docker ps
+```
+You should see the MySQL container (`mysqlcontainer`) in the list with the status "Up."
+
+![image](https://github.com/shashankbhosagi/docker-help/assets/78866224/91633b39-c77b-4f3d-b03b-60f516ba74ea)
+
+## 5. Access MySQL Shell (Optional)
+If you want to access the MySQL shell within the container, use the following command:
+
+```bash
+docker exec -it mysqlcontainer mysql -u root -p
+```
+Enter the root password when prompted.
+
+![image](https://github.com/shashankbhosagi/docker-help/assets/78866224/cefe829a-8760-426b-b5b7-ba195d42b95b)
+
+
+
+## 6. Stop and Remove the Container (Optional)
+To stop and remove the MySQL container, use the following command:
+
+```bash
+docker-compose down
+```
+This command will stop and remove the containers defined in the `docker-compose.yml` file.
+
+
+
+
+
+
+
+
+
+
+
 
