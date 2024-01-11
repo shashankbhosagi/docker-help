@@ -1,6 +1,6 @@
-# docker-help
-This repo contains what I need for running docker on my computer.
-Note : I have windows so below configuration files may contain OS specific stuff, you need to tweak the configuration if you want to use it on Ubuntu/MacOS
+# Docker-help
+- This repo contains what I need for running docker on my computer.
+- Note : I have windows so below configuration files may contain OS specific stuff, you need to tweak the configuration if you want to use it on Ubuntu/MacOS
 
 # mysql (docker-compose.yml)
 ```python
