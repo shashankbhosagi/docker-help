@@ -1,13 +1,14 @@
 # Docker-help
 - This repo contains what I need for running docker on my computer.
 - Note : I have windows so below configuration files may contain OS specific stuff, you need to tweak the configuration if you want to use it on Ubuntu/MacOS
+- Note : I just got to know that we can use environment variables in `docker-compose.yml`, means in the volumes instead of directly mentioning `D:/database`, you can use a env variable there, and while running it on your system you can provide where you want to store the MySQL data directory for persistent storage.
 
 # mysql (docker-compose.yml)
 ```python
 services:
   mysqldb:
     image: mysql:8.0
-    container_name: mysqlcontainer
+    container_name: container_name
     command: --default-authentication-plugin=mysql_native_password
     restart: unless-stopped
     volumes:
@@ -18,7 +19,7 @@ services:
     expose:
       - 3306
     environment:
-      - MYSQL_DATABASE=patientdb
+      - MYSQL_DATABASE=db_name
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=root
       - MYSQL_ROOT_PASSWORD=root
